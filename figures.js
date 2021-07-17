@@ -1,52 +1,66 @@
 // Square code
 console.group("Squares");
-const squareSide = 5;
-console.log("The sides of the square measure: " + squareSide + "cm");
+// const squareSide = 5;
+// console.log("The sides of the square measure: " + squareSide + "cm");
 
-const squarePerimeter = squareSide * 4;
-console.log("The perimeter of the square is: " + squarePerimeter + "cm");
+function squarePerimeter(side) {
+  return side * 4;
+}
+// console.log("The perimeter of the square is: " + squarePerimeter + "cm");
 
-const squareArea = squareSide * squareSide;
-console.log("The area of the square is: " + squareArea + "cm²");
+function squareArea(side) {
+  return side * side;
+}
+// console.log("The area of the square is: " + squareArea + "cm²");
 console.groupEnd();
 
 
 // Triangle code
 console.group("Triangles");
-const triangleSide1 = 6;
-const triangleSide2 = 6;
-const triangleBase = 4;
-const triangleHeight = 5.5;
+// const triangleSide1 = 6;
+// const triangleSide2 = 6;
+// const triangleBase = 4;
+// console.log(
+//     "The sides of the triangle measure: " 
+//     + triangleSide1 + "cm, " 
+//     + triangleSide2 + "cm and " 
+//     + triangleBase + "cm"
+// );
 
-console.log(
-    "The sides of the triangle measure: " 
-    + triangleSide1 + "cm, " 
-    + triangleSide2 + "cm and " 
-    + triangleBase + "cm"
-);
-console.log("The height of the triangle is: " + triangleHeight + "cm");
+// const triangleHeight = 5.5;
+// console.log("The height of the triangle is: " + triangleHeight + "cm");
 
-const trianglePerimeter = triangleSide1 + triangleSide2 + triangleBase;
-console.log("The perimeter of the triangle is: " + trianglePerimeter + "cm");
+function trianglePerimeter(side1, side2, base) {
+  return side1 + side2 + base;
+}
+// console.log("The perimeter of the triangle is: " + trianglePerimeter + "cm");
 
-const triangleArea = (triangleBase * triangleHeight) / 2;
-console.log("The area of the triangle is: " + triangleArea + "cm²");
+function triangleArea(base, height) {
+  return (base * height) / 2;
+}
+// console.log("The area of the triangle is: " + triangleArea + "cm²");
 console.groupEnd();
 
 
 // Circle code
 console.group("Circles");
-const circleRadius = 4;
-console.log("The radius of the circle is: " + circleRadius + "cm");
+// const circleRadius = 4;
+// console.log("The radius of the circle is: " + circleRadius + "cm");
 
-const circleDiameter = circleRadius * 2;
-console.log("The diameter of the circle is: " + circleDiameter + "cm");
+function circleDiameter(radius) {
+  return radius * 2;
+}
 
 const PI = Math.PI;
 console.log("PI is: " + PI);
 
-const circlePerimeter = circleDiameter * PI;
-console.log("The perimeter of the circle is: " + circlePerimeter + "cm");
+function circlePerimeter(radius) {
+  const diameter = circleDiameter(radius);
+  return diameter * PI;
+}
 
-const circleArea = (circleRadius * circleRadius) * PI; 
-console.log("The area of the circle is: " + circleArea + "cm²");
+function circleArea(radius) {
+  return (radius * radius) * PI; 
+}
+
+console.groupEnd();
