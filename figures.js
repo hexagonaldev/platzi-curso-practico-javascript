@@ -64,3 +64,22 @@ function circleArea(radius) {
 }
 
 console.groupEnd();
+
+
+// Interact with HTML
+function calculatePerimeterSquare() {
+  const input = document.getElementById("InputSquare");
+  const value = input.value;
+  
+  const perimeter = squarePerimeter(value);
+  alert(perimeter);
+}
+
+function calculateAreaSquare() {
+  const input = document.getElementById("InputSquare");
+  const value = input.value;
+  
+  const area = squareArea(value);
+  alert(area);
+
+}
